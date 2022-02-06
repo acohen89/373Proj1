@@ -25,9 +25,10 @@ bool readText(string fileName){
     ifstream file (fileName);
     if (file.is_open()){
         while ( getline (file, line) ){
-            cout << line << endl; 
             vector<string> lineVector = stringToVector(line);
             if(lineVector.at(0) == "state"){
+                State s(lineVector);
+                cout << s << endl; 
             }
         }
         file.close();
