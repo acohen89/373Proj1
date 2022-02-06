@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <bits/stdc++.h>
+
 #include "State.h"
+#include "Transition.h"
 using namespace std; 
 
 
@@ -29,6 +31,11 @@ bool readText(string fileName){
             if(lineVector.at(0) == "state"){
                 State s(lineVector);
                 cout << s << endl; 
+            } else if(lineVector.at(0) == "transition"){
+                Transition t(lineVector);
+                cout << t << endl;
+            } else {
+                cout << "Error on reading input file " << endl; 
             }
         }
         file.close();
@@ -37,7 +44,7 @@ bool readText(string fileName){
 }
 int main(int argc, char *argv[]){
     cout << "Hello World" << endl; 
-    readText(argv[1]);
+    if(!readText(argv[1])) cout << "input file reading error" << endl; 
     return 0; 
 }
 
