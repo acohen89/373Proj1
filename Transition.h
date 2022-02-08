@@ -3,18 +3,20 @@
 
 #include <string> 
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Transition {   
   private:            
-    int currentState; 
-    char inputSymbol;
+    int startState; 
+    char inputSymbol; // transition only taken if tapehead points to this symbol 
     int nextState; 
     char writeToTape; 
     char direction; 
   public: 
     Transition(vector<string>);
-      friend ostream& operator<<(ostream& os, const Transition& tr);
+    int getStartState();
+    friend ostream& operator<<(ostream& os, const Transition& tr);
 
 };
 
