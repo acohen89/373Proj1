@@ -9,11 +9,10 @@
 using namespace std;
 
 class Tape{   
-  private:
+  public: 
     string tape;   
     int headIndex;
-    char headChar;           
-  public: 
+    char headChar;         
     Tape(string);
     friend ostream& operator<<(ostream& os, const Tape& t);
 

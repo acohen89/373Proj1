@@ -16,6 +16,21 @@ State::State(vector<string> stateInput){
         state = "NONE"; 
     }
 }
+
+State::State(){}
+
+Transition State::findTrans(char inputSymbol){ 
+    cout << "Looking for transition with inputSymbol " << inputSymbol << " in state "  << num << endl; 
+    for(int t = 0; t < trans.size(); t++){
+        // cout << t << endl;
+        // cout << trans.at(t) << endl;
+        if(trans.at(t).getInputSymbol() == inputSymbol){
+            return trans.at(t);
+        }
+    }
+    //* error comes from not finding the input symbol I think 
+    return Transition(); 
+}
 void State::addTransition(Transition t){
     if(t.getStartState() == num){
         trans.push_back(t); 

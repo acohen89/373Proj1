@@ -15,7 +15,12 @@ class Transition {
     char direction; 
   public: 
     Transition(vector<string>);
+    Transition(){};
     int getStartState();
+    int getNextState(){return nextState;}
+    char getWriteToTape(){return writeToTape;}
+    char getInputSymbol(){return inputSymbol;}
+    char getDirection(){return direction;}
     friend ostream& operator<<(ostream& os, const Transition& tr);
 
 };

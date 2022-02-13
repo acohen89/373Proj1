@@ -1,0 +1,29 @@
+Num: 0 State: start
+    Start State: 0 Input Symbol: 0 Next State: 1 Write To Tape: $ Direction: R
+    Start State: 0 Input Symbol: 1 Next State: 3 Write To Tape: $ Direction: L
+
+Num: 1 State: NONE
+    Start State: 1 Input Symbol: 0 Next State: 1 Write To Tape: 0 Direction: R
+    Start State: 1 Input Symbol: _ Next State: 2 Write To Tape: 0 Direction: R
+    Start State: 1 Input Symbol: 1 Next State: 3 Write To Tape: 0 Direction: R
+    Start State: 1 Input Symbol: 2 Next State: 6 Write To Tape: 2 Direction: S
+
+Num: 2 State: NONE
+    Start State: 2 Input Symbol: _ Next State: 4 Write To Tape: # Direction: L
+
+Num: 3 State: NONE
+    Start State: 3 Input Symbol: 2 Next State: 6 Write To Tape: 2 Direction: S
+    Start State: 3 Input Symbol: 1 Next State: 3 Write To Tape: 1 Direction: R
+    Start State: 3 Input Symbol: _ Next State: 2 Write To Tape: 1 Direction: R
+    Start State: 3 Input Symbol: 0 Next State: 1 Write To Tape: 1 Direction: R
+
+Num: 4 State: NONE
+    Start State: 4 Input Symbol: 0 Next State: 4 Write To Tape: 0 Direction: L
+    Start State: 4 Input Symbol: 1 Next State: 4 Write To Tape: 1 Direction: L
+    Start State: 4 Input Symbol: $ Next State: 5 Write To Tape: $ Direction: S
+
+Num: 5 State: accept
+
+Num: 6 State: reject
+
+_____________________________________________________________

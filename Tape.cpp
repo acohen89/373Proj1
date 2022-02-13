@@ -2,6 +2,8 @@
 
 Tape::Tape(string init){
     tape = init; 
+    headIndex = 0;
+    headChar = init[0];
 }
 
 ostream& operator<<(ostream& os, const Tape& t){
