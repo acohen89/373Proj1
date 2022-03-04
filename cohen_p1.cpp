@@ -111,7 +111,7 @@ string runMachine(vector<State> *states, Tape tape, int maxIters){
         tape.headChar = tape.tape[tape.headIndex]; 
 
         cState = findState(curTran.getNextState(), states);
-        cout << "Out " << tape.tape << endl << endl;
+        // cout << "Out " << tape.tape << endl << endl;
 
     }
     return parseOutput(tape.tape, tape.headIndex) + " " + "quit";
